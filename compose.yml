@@ -2,45 +2,12 @@ services:
   python-app:
     build:
       context: .
-      dockerfile: .devcontainer/python-container/Dockerfile
+      dockerfile: .devcontainer/Dockerfile
     volumes:
       # Mount the root folder that contains .git
       - .:/workspace:cached
     command: sleep infinity
     # ...
-
-  golang-app:
-    build:
-      context: .
-      dockerfile: .devcontainer/golang-container/Dockerfile
-    volumes:
-      # Mount the root folder that contains .git
-      - .:/workspace:cached
-    command: sleep infinity
-    # ...
-
-  node-app:
-    build:
-      context: .
-      dockerfile: .devcontainer/node-container/Dockerfile
-    volumes:
-      # Mount the root folder that contains .git
-      - .:/workspace:cached
-    command: sleep infinity
-    links:
-      - python-app
-      - golang-app
-    # ...
-
-  terraform-iac:
-    build:
-      context: .
-      dockerfile: .devcontainer/terraform-container/Dockerfile
-    volumes:
-      # Mount the root folder that contains .git
-      - .:/workspace:cached
-      - ./.devcontainer/terraform-container/direnv/config.toml:/root/.config/direnv/config.toml
-    command: sleep infinity
 
   postgres:
     build:
@@ -53,28 +20,6 @@ services:
     tty: true
     environment:
       POSTGRES_PASSWORD: 'postgres'
-
-  redis:
-    build:
-      context: .
-      dockerfile: infra/redis/Dockerfile
-    ports:
-      - '6379:6379'
-    volumes:
-      - 'redis-store:/data'
-    command: redis-server --appendonly yes
-
-  mongodb:
-    build:
-      context: .
-      dockerfile: infra/mongodb/Dockerfile
-    ports:
-      - 27017:27017
-    volumes:
-      - mongodb-store:/data/db
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: password
 
   minio:
     build:
@@ -92,6 +37,4 @@ services:
 
 volumes:
   pgdb-store:
-  redis-store:
-  mongodb-store:
   minio-store:

@@ -1,6 +1,6 @@
 {
-  "name": "Python Container",
-  "dockerComposeFile": ["../../compose.yml"],
+  "name": "Data Engineering Labo Container",
+  "dockerComposeFile": ["../compose.yml"],
   "service": "python-app",
   "shutdownAction": "none",
   "workspaceFolder": "/workspace",
@@ -27,7 +27,7 @@
         "tamasfe.even-better-toml"
       ],
       "settings": {
-        "python.defaultInterpreterPath": "${workspaceFolder}/python-src/.venv/bin/python",
+        //"python.defaultInterpreterPath": "${workspaceFolder}/python-src/.venv/bin/python",
         "python.venvFolders": ["**/.venv"],
         "[python]": {
           "editor.defaultFormatter": "charliermarsh.ruff",
@@ -37,8 +37,15 @@
           },
           "editor.formatOnSave": true
         },
-        "mypy.dmypyExecutable": "${workspaceFolder}/python-src/.venv/bin/mypy",
-        "mypy.runUsingActiveInterpreter": true,
+        "mypy-type-checker.importStrategy": "fromEnvironment",
+        "mypy-type-checker.args": [
+          "--config-file \"/workspace/mypy.ini\""
+        ],
+        "python.analysis.typeCheckingMode": "basic",
+        "python.analysis.autoSearchPaths": false,
+        "python.analysis.extraPaths": [
+          "**/src/"
+        ],
         "files.insertFinalNewline": true,
         "files.trimTrailingWhitespace": true,
         "terminal.integrated.defaultProfile.linux": "zsh",
