@@ -1,3 +1,3 @@
-# python-src
+# jupyter
 
 Describe your project here.
