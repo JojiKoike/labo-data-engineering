@@ -1,0 +1,24 @@
+default_stages: [commit]
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.3.5
+    hooks:
+    - id: ruff
+      name: Ruff check
+      description: "Run 'ruff check' for extremely fast Python linting"
+      args: [ --fix ]
+
+    - id: ruff-format
+      name: Ruff format
+      description: "Run 'ruff format' for extremely fast Python formatting"
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.2.0
+    hooks:
+      - id: mypy
+        exclude: ^tests/|^any-path/ # mypyの除外ディレクトリ。正規表現で記述できる
+        additional_dependencies: [pydantic, types-PyYAML==6.0.7]
+  - repo: https://github.com/psf/black
+    rev: 23.3.0
+    hooks:
+      - id: black
+        language_version: python3

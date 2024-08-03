@@ -1,0 +1,48 @@
+{
+  "name": "Node Container",
+  "dockerComposeFile": ["../../compose.yml"],
+  "service": "node-app",
+  "shutdownAction": "none",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "codezombiech.gitignore",
+        "eamodio.gitlens",
+        "mosapride.zenkaku",
+        "ms-azuretools.vscode-docker",
+        "oderwat.indent-rainbow",
+        "pkief.material-icon-theme",
+        "shardulm94.trailing-spaces",
+        "usernamehw.errorlens",
+        "yzhang.markdown-all-in-one",
+        "seatonjiang.gitmoji-vscode",
+        "streetsidesoftware.code-spell-checker",
+        "donjayamanne.githistory",
+        "tamasfe.even-better-toml",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "astro-build.astro-vscode",
+        "sheltonlouis.astro-snippets"
+      ],
+      "settings": {
+        "files.insertFinalNewline": true,
+        "files.trimTrailingWhitespace": true,
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true,
+        "editor.formatOnType": true,
+        "editor.codeActionsOnSave": {},
+        "prettier.documentSelectors": ["**/*.astro"],
+        "[astro]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[json]": {
+          "editor.formatOnSave": false
+        },
+        "css.completion.completePropertyWithSemicolon": true
+      }
+    }
+  }
+}

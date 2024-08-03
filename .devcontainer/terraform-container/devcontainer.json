@@ -1,0 +1,45 @@
+{
+  "name": "Terraform Container",
+  "dockerComposeFile": ["../../compose.yml"],
+  "service": "terraform-iac",
+  "shutdownAction": "none",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "codezombiech.gitignore",
+        "eamodio.gitlens",
+        "mosapride.zenkaku",
+        "ms-azuretools.vscode-docker",
+        "oderwat.indent-rainbow",
+        "pkief.material-icon-theme",
+        "shardulm94.trailing-spaces",
+        "usernamehw.errorlens",
+        "yzhang.markdown-all-in-one",
+        "seatonjiang.gitmoji-vscode",
+        "streetsidesoftware.code-spell-checker",
+        "donjayamanne.githistory",
+        "tamasfe.even-better-toml",
+        "ms-azuretools.vscode-docker",
+        "4ops.terraform",
+        "hashicorp.terraform",
+        "discretegames.f5anything"
+      ],
+      "settings": {
+        "editor.formatOnPaste": false, // required
+        "editor.formatOnType": false, // required
+        "editor.formatOnSave": true, // optional
+        "editor.formatOnSaveMode": "file", // required to format on save
+        "files.autoSave": "off",
+        "files.insertFinalNewline": true,
+        "files.trimTrailingWhitespace": true,
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.profiles.linux": {
+          "zsh": {
+            "path": "/bin/zsh"
+          }
+        }
+      }
+    }
+  }
+}
