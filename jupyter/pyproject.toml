@@ -7,6 +7,9 @@ authors = [
 ]
 dependencies = [
     "jupyterlab>=4.2.4",
+    "pandas>=2.2.2",
+    "pyarrow>=17.0.0",
+    "pyspark>=3.5.1",
 ]
 readme = "README.md"
 requires-python = ">= 3.8"

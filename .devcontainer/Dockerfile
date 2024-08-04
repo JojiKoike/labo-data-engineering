@@ -26,10 +26,14 @@ ENV PYTHONUNBUFFERED True
 RUN rye config --set-bool behavior.global-python=true && \
     rye config --set-bool behavior.use-uv=true
 
+RUN apt-get update && \
+    apt-get install -y openjdk-17-jdk
+
 USER vscode
 RUN python -m pip install --upgrade pip && \
     python -m pip install --upgrade pipx && \
     python -m pipx install mypy
+
 
 ENV PATH="$PATH:~/.local/bin"
 

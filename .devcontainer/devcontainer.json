@@ -24,7 +24,8 @@
         "matangover.mypy",
         "streetsidesoftware.code-spell-checker",
         "donjayamanne.githistory",
-        "tamasfe.even-better-toml"
+        "tamasfe.even-better-toml",
+        "ms-toolsai.jupyter"
       ],
       "settings": {
         //"python.defaultInterpreterPath": "${workspaceFolder}/python-src/.venv/bin/python",
