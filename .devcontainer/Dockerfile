@@ -27,7 +27,11 @@ RUN rye config --set-bool behavior.global-python=true && \
     rye config --set-bool behavior.use-uv=true
 
 RUN apt-get update && \
-    apt-get install -y openjdk-17-jdk
+    apt-get install -y openjdk-17-jdk curl unzip
+
+RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip" -o "awscliv2.zip" && \
+    unzip awscliv2.zip && \
+    sudo ./aws/install
 
 USER vscode
 RUN python -m pip install --upgrade pip && \
