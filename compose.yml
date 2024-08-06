@@ -13,6 +13,7 @@ services:
       context: .
       dockerfile: infra/spark/Dockerfile
     container_name: spark-cluster-master
+    hostname: spark-cluster-master
     user: '0'
     tty: true
     ports:
@@ -25,6 +26,7 @@ services:
       context: .
       dockerfile: infra/spark/Dockerfile
     container_name: spark-cluster-workder1
+    hostname: spark-cluster-workder1
     user: '0'
     tty: true
     ports:
@@ -38,6 +40,7 @@ services:
       context: .
       dockerfile: infra/spark/Dockerfile
     container_name: spark-cluster-workder2
+    hostname: spark-cluster-workder2
     user: '0'
     tty: true
     ports:
@@ -51,6 +54,7 @@ services:
       context: .
       dockerfile: infra/spark/Dockerfile
     container_name: spark-cluster-workder3
+    hostname: spark-cluster-workder3
     user: '0'
     tty: true
     ports:
