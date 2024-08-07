@@ -109,6 +109,17 @@ services:
       MINIO_ROOT_USER: root
       MINIO_ROOT_PASSWORD: password
 
+  bigquery-emulator:
+    build:
+      context: .
+      dockerfile: infra/bigquery/Dockerfile
+    platform: 'linux/x86_64'
+    ports:
+      - '9050:9050'
+    volumes:
+      - ./bigquery:/bigquery
+    command: 'bigquery-emulator --project=test'
+
 volumes:
   pgdb-store:
   minio-store:
