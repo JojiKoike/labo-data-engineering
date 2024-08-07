@@ -27,8 +27,10 @@
         "tamasfe.even-better-toml",
         "ms-toolsai.jupyter",
         "mechatroner.rainbow-csv",
-        "zainchen.json"
-
+        "zainchen.json",
+        "mads-hartmann.bash-ide-vscode",
+        "rogalmic.bash-debug",
+        "shakram02.bash-beautify"
       ],
       "settings": {
         //"python.defaultInterpreterPath": "${workspaceFolder}/python-src/.venv/bin/python",
