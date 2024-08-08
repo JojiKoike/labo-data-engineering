@@ -30,7 +30,10 @@
         "zainchen.json",
         "mads-hartmann.bash-ide-vscode",
         "rogalmic.bash-debug",
-        "shakram02.bash-beautify"
+        "shakram02.bash-beautify",
+        "mtxr.sqltools",
+        "renesaarsoo.sql-formatter-vsc",
+        "ms-toolsai.datawrangler"
       ],
       "settings": {
         //"python.defaultInterpreterPath": "${workspaceFolder}/python-src/.venv/bin/python",
