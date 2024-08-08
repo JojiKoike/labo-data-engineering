@@ -1,0 +1,14 @@
+{
+	"sqltools.connections": [
+		{
+			"previewLimit": 50,
+			"server": "postgres",
+			"port": 5432,
+			"driver": "PostgreSQL",
+			"name": "pg_sql_recipe",
+			"database": "sql_recipe",
+			"username": "postgres",
+			"password": "postgres"
+		}
+	]
+}

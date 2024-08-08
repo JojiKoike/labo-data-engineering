@@ -94,7 +94,7 @@ services:
       - pgdb-store:/var/lib/postgresql/data
     tty: true
     environment:
-      POSTGRES_USER: portgres
+      POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
 
   minio:

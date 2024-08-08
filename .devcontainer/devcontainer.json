@@ -33,7 +33,11 @@
         "shakram02.bash-beautify",
         "mtxr.sqltools",
         "renesaarsoo.sql-formatter-vsc",
-        "ms-toolsai.datawrangler"
+        "ms-toolsai.datawrangler",
+        "mtxr.sqltools-driver-pg",
+        "mtxr.sqltools-driver-mysql",
+        "evidence.sqltools-bigquery-driver",
+        "regadas.sqltools-trino-driver"
       ],
       "settings": {
         //"python.defaultInterpreterPath": "${workspaceFolder}/python-src/.venv/bin/python",

@@ -1398,7 +1398,7 @@ VALUES
   , ('eee2b2', 'U002', 'view', '2015-01-10 13:00:00')
   , ('eee2b2', 'U001', 'view', '2015-01-11 15:00:00')
 ;
-DROP TABLE IF EXISTS neighbor_pref; 
+DROP TABLE IF EXISTS neighbor_pref;
 CREATE TABLE neighbor_pref(
     pref_id             integer
   , pref_name           varchar(255)
@@ -2652,14 +2652,15 @@ VALUES
   , ('10002', 4650,  500)
   , ('10003', 3870, NULL)
 ;
--- 必要なテーブルはありませんDROP TABLE IF EXISTS access_log ;
+
+DROP TABLE IF EXISTS access_log ;
 CREATE TABLE access_log (
     stamp    varchar(255)
   , referrer text
   , url      text
 );
 
-INSERT INTO access_log 
+INSERT INTO access_log
 VALUES
     ('2016-08-26 12:02:00', 'http://www.other.com/path1/index.php?k1=v1&k2=v2#Ref1', 'http://www.example.com/video/detail?id=001')
   , ('2016-08-26 12:02:01', 'http://www.other.net/path1/index.php?k1=v1&k2=v2#Ref1', 'http://www.example.com/video#ref'          )
@@ -2672,7 +2673,7 @@ CREATE TABLE access_log (
   , url      text
 );
 
-INSERT INTO access_log 
+INSERT INTO access_log
 VALUES
     ('2016-08-26 12:02:00', 'http://www.other.com/path1/index.php?k1=v1&k2=v2#Ref1', 'http://www.example.com/video/detail?id=001')
   , ('2016-08-26 12:02:01', 'http://www.other.net/path1/index.php?k1=v1&k2=v2#Ref1', 'http://www.example.com/video#ref'          )
@@ -2782,7 +2783,8 @@ VALUES
   , (10004, 'U002', 800, '2017-03-01 10:00:00')
   , (10005, 'U002', 400, '2017-03-02 10:00:00')
 ;
--- 必要なテーブルはありませんDROP TABLE IF EXISTS quarterly_sales;
+
+DROP TABLE IF EXISTS quarterly_sales;
 CREATE TABLE quarterly_sales (
     year integer
   , q1   integer
