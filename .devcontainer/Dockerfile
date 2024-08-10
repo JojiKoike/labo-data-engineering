@@ -28,7 +28,7 @@ RUN rye config --set-bool behavior.global-python=true && \
 
 RUN apt-get update && \
     apt-get install -y openjdk-17-jdk curl unzip imagemagick rename \
-    libgdal-dev gcc g++ libspatialindex-dev
+    libgdal-dev gcc g++ libspatialindex-dev gnupg apt-transport-https ca-certificates
 
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip" -o "awscliv2.zip" && \
     unzip awscliv2.zip && \
@@ -37,14 +37,4 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip" -o "awscliv
 RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && \
     curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key --keyring /usr/share/keyrings/cloud.google.gpg  add - && \
     sudo apt-get update -y && \
-    sudo apt-get install google-cloud-sdk -y
-
-USER vscode
-RUN python -m pip install --upgrade pip && \
-    python -m pip install --upgrade pipx && \
-    python -m pipx install mypy
-
-
-ENV PATH="$PATH:~/.local/bin"
-
-RUN git config --global --add safe.directory /workspace
+    sudo apt-get install -y google-cloud-sdk google-cloud-cli google-cloud-sdk-gke-gcloud-auth-plugin

@@ -4,12 +4,45 @@
   "service": "python-app",
   "shutdownAction": "none",
   "workspaceFolder": "/workspace",
+  "postCreateCommand": "git config --global --add safe.directory /workspace && pre-commit install && gcloud init --no-launch-browser && gcloud auth application-default login",
+  "features": {
+    "ghcr.io/devcontainers/features/terraform:1": {
+      "version": "1.6.5",
+      "tflint": "0.52.0",
+      "terragrunt": "0.66.3"
+    },
+    "ghcr.io/dhoeric/features/terraform-docs:1": {
+      "version": "0.18.0"
+    },
+    "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {
+      "version": "1.30.3",
+      "helm": "3.15.3",
+      "minikube": "1.33.1"
+    },
+    "ghcr.io/devcontainers-contrib/features/pre-commit:2": {
+      "version": "3.8.0"
+    },
+    "ghcr.io/devcontainers-contrib/features/ruff:1": {
+      "version": "0.5.7"
+    },
+    "ghcr.io/devcontainers-contrib/features/mypy:2": {
+      "version": "1.11.1"
+    },
+    "ghcr.io/devcontainers-contrib/features/sqlfluff:1": {
+      "version": "3.1.0"
+    },
+    "ghcr.io/devcontainers-contrib/features/sqlfmt:1": {
+      "version": "0.23.2"
+    }
+  },
   "customizations": {
     "vscode": {
       "extensions": [
         "charliermarsh.ruff",
+        "editorconfig.editorconfig",
         "codezombiech.gitignore",
         "eamodio.gitlens",
+        "mhutchie.git-graph",
         "kevinrose.vsc-python-indent",
         "mosapride.zenkaku",
         "ms-azuretools.vscode-docker",
