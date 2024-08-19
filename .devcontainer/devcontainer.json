@@ -70,7 +70,8 @@
         "mtxr.sqltools-driver-pg",
         "mtxr.sqltools-driver-mysql",
         "evidence.sqltools-bigquery-driver",
-        "regadas.sqltools-trino-driver"
+        "regadas.sqltools-trino-driver",
+        "chrmarti.regex"
       ],
       "settings": {
         //"python.defaultInterpreterPath": "${workspaceFolder}/python-src/.venv/bin/python",
