@@ -71,7 +71,9 @@
         "mtxr.sqltools-driver-mysql",
         "evidence.sqltools-bigquery-driver",
         "regadas.sqltools-trino-driver",
-        "chrmarti.regex"
+        "chrmarti.regex",
+        "ms-toolsai.datawrangler",
+        "dvirtz.parquet-viewer"
       ],
       "settings": {
         //"python.defaultInterpreterPath": "${workspaceFolder}/python-src/.venv/bin/python",
