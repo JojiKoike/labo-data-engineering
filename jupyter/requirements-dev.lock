@@ -10,6 +10,8 @@
 #   universal: false
 
 -e file:.
+annotated-types==0.7.0
+    # via pydantic
 anyio==4.4.0
     # via httpx
     # via jupyter-server
@@ -32,6 +34,16 @@ beautifulsoup4==4.12.3
     # via nbconvert
 bleach==6.1.0
     # via nbconvert
+blis==0.7.11
+    # via thinc
+cachetools==5.5.0
+    # via google-auth
+catalogue==2.0.10
+    # via spacy
+    # via srsly
+    # via thinc
+category-encoders==2.6.3
+    # via jupyter
 certifi==2024.7.4
     # via httpcore
     # via httpx
@@ -42,12 +54,23 @@ cfgv==3.4.0
     # via pre-commit
 charset-normalizer==3.3.2
     # via requests
+click==8.1.7
+    # via typer
+cloudpathlib==0.19.0
+    # via weasel
 comm==0.2.2
     # via ipykernel
+confection==0.1.5
+    # via thinc
+    # via weasel
 contourpy==1.3.0
     # via matplotlib
 cycler==0.12.1
     # via matplotlib
+cymem==2.0.8
+    # via preshed
+    # via spacy
+    # via thinc
 debugpy==1.8.5
     # via ipykernel
 decorator==5.1.1
@@ -66,6 +89,31 @@ fonttools==4.53.1
     # via matplotlib
 fqdn==1.5.1
     # via jsonschema
+ginza==5.2.0
+    # via ja-ginza
+google-api-core==2.19.2
+    # via google-cloud-bigquery
+    # via google-cloud-core
+google-auth==2.34.0
+    # via google-api-core
+    # via google-cloud-bigquery
+    # via google-cloud-core
+google-cloud-bigquery==3.25.0
+    # via jupyter
+google-cloud-core==2.4.1
+    # via google-cloud-bigquery
+google-crc32c==1.6.0
+    # via google-resumable-media
+google-resumable-media==2.7.2
+    # via google-cloud-bigquery
+googleapis-common-protos==1.65.0
+    # via google-api-core
+    # via grpcio-status
+grpcio==1.66.1
+    # via google-api-core
+    # via grpcio-status
+grpcio-status==1.66.1
+    # via google-api-core
 h11==0.14.0
     # via httpcore
 httpcore==1.0.5
@@ -79,6 +127,8 @@ idna==3.7
     # via httpx
     # via jsonschema
     # via requests
+imbalanced-learn==0.12.3
+    # via jupyter
 iniconfig==2.0.0
     # via pytest
 ipykernel==6.29.5
@@ -87,6 +137,8 @@ ipython==8.26.0
     # via ipykernel
 isoduration==20.11.0
     # via jsonschema
+ja-ginza==5.2.0
+    # via jupyter
 japanize-matplotlib==1.1.3
     # via jupyter
 jedi==0.19.1
@@ -96,6 +148,10 @@ jinja2==3.1.4
     # via jupyterlab
     # via jupyterlab-server
     # via nbconvert
+    # via spacy
+joblib==1.4.2
+    # via imbalanced-learn
+    # via scikit-learn
 json5==0.9.25
     # via jupyterlab-server
 jsonpointer==3.0.0
@@ -137,6 +193,14 @@ jupyterlab-server==2.27.3
     # via jupyterlab
 kiwisolver==1.4.7
     # via matplotlib
+langcodes==3.4.0
+    # via spacy
+language-data==1.2.0
+    # via langcodes
+marisa-trie==1.2.0
+    # via language-data
+markdown-it-py==3.0.0
+    # via rich
 markupsafe==2.1.5
     # via jinja2
     # via nbconvert
@@ -147,8 +211,14 @@ matplotlib==3.9.2
 matplotlib-inline==0.1.7
     # via ipykernel
     # via ipython
+mdurl==0.1.2
+    # via markdown-it-py
 mistune==3.0.2
     # via nbconvert
+murmurhash==1.0.10
+    # via preshed
+    # via spacy
+    # via thinc
 nbclient==0.10.0
     # via nbconvert
 nbconvert==7.16.4
@@ -164,14 +234,24 @@ nodeenv==1.9.1
 notebook-shim==0.2.4
     # via jupyterlab
 numpy==2.0.1
+    # via blis
+    # via category-encoders
     # via contourpy
+    # via imbalanced-learn
     # via matplotlib
     # via pandas
+    # via patsy
     # via pyarrow
+    # via scikit-learn
+    # via scipy
     # via seaborn
+    # via spacy
+    # via statsmodels
+    # via thinc
 overrides==7.7.0
     # via jupyter-server
 packaging==24.1
+    # via google-cloud-bigquery
     # via ipykernel
     # via jupyter-server
     # via jupyterlab
@@ -179,27 +259,50 @@ packaging==24.1
     # via matplotlib
     # via nbconvert
     # via pytest
+    # via spacy
+    # via statsmodels
+    # via thinc
+    # via weasel
 pandas==2.2.2
+    # via category-encoders
     # via jupyter
     # via seaborn
+    # via statsmodels
 pandocfilters==1.5.1
     # via nbconvert
 parso==0.8.4
     # via jedi
+patsy==0.5.6
+    # via category-encoders
+    # via statsmodels
 pexpect==4.9.0
     # via ipython
 pillow==10.4.0
     # via matplotlib
+plac==1.4.3
+    # via ginza
 platformdirs==4.2.2
     # via jupyter-core
     # via virtualenv
 pluggy==1.5.0
     # via pytest
+polars==1.6.0
+    # via jupyter
 pre-commit==3.8.0
+preshed==3.0.9
+    # via spacy
+    # via thinc
 prometheus-client==0.20.0
     # via jupyter-server
 prompt-toolkit==3.0.47
     # via ipython
+proto-plus==1.24.0
+    # via google-api-core
+protobuf==5.28.0
+    # via google-api-core
+    # via googleapis-common-protos
+    # via grpcio-status
+    # via proto-plus
 psutil==6.0.0
     # via ipykernel
 ptyprocess==0.7.0
@@ -211,11 +314,24 @@ py4j==0.10.9.7
     # via pyspark
 pyarrow==17.0.0
     # via jupyter
+pyasn1==0.6.0
+    # via pyasn1-modules
+    # via rsa
+pyasn1-modules==0.4.0
+    # via google-auth
 pycparser==2.22
     # via cffi
+pydantic==2.9.0
+    # via confection
+    # via spacy
+    # via thinc
+    # via weasel
+pydantic-core==2.23.2
+    # via pydantic
 pygments==2.18.0
     # via ipython
     # via nbconvert
+    # via rich
 pyparsing==3.1.4
     # via matplotlib
 pyspark==3.5.1
@@ -223,6 +339,7 @@ pyspark==3.5.1
 pytest==8.3.2
 python-dateutil==2.9.0.post0
     # via arrow
+    # via google-cloud-bigquery
     # via jupyter-client
     # via matplotlib
     # via pandas
@@ -242,38 +359,91 @@ referencing==0.35.1
     # via jsonschema-specifications
     # via jupyter-events
 requests==2.32.3
+    # via google-api-core
+    # via google-cloud-bigquery
     # via jupyterlab-server
+    # via spacy
+    # via weasel
 rfc3339-validator==0.1.4
     # via jsonschema
     # via jupyter-events
 rfc3986-validator==0.1.1
     # via jsonschema
     # via jupyter-events
+rich==13.8.0
+    # via typer
 rpds-py==0.19.1
     # via jsonschema
     # via referencing
+rsa==4.9
+    # via google-auth
 ruff==0.5.6
+scikit-learn==1.5.1
+    # via category-encoders
+    # via imbalanced-learn
+    # via jupyter
+scipy==1.14.1
+    # via category-encoders
+    # via imbalanced-learn
+    # via jupyter
+    # via scikit-learn
+    # via statsmodels
 seaborn==0.13.2
     # via jupyter
 send2trash==1.8.3
     # via jupyter-server
 setuptools==72.1.0
     # via jupyterlab
+    # via marisa-trie
+    # via spacy
+    # via thinc
+shellingham==1.5.4
+    # via typer
 six==1.16.0
     # via asttokens
     # via bleach
+    # via patsy
     # via python-dateutil
     # via rfc3339-validator
+smart-open==7.0.4
+    # via weasel
 sniffio==1.3.1
     # via anyio
     # via httpx
 soupsieve==2.5
     # via beautifulsoup4
+spacy==3.7.6
+    # via ginza
+    # via ja-ginza
+    # via jupyter
+spacy-legacy==3.0.12
+    # via spacy
+spacy-loggers==1.0.5
+    # via spacy
+srsly==2.4.8
+    # via confection
+    # via spacy
+    # via thinc
+    # via weasel
 stack-data==0.6.3
     # via ipython
+statsmodels==0.14.2
+    # via category-encoders
+sudachidict-core==20240716
+    # via ginza
+    # via ja-ginza
+sudachipy==0.6.8
+    # via ginza
+    # via ja-ginza
+    # via sudachidict-core
 terminado==0.18.1
     # via jupyter-server
     # via jupyter-server-terminals
+thinc==8.2.4
+    # via spacy
+threadpoolctl==3.5.0
+    # via imbalanced-learn
+    # via scikit-learn
 tinycss2==1.3.0
     # via nbconvert
 tornado==6.4.1
@@ -282,6 +452,8 @@ tornado==6.4.1
     # via jupyter-server
     # via jupyterlab
     # via terminado
+tqdm==4.66.5
+    # via spacy
 traitlets==5.14.3
     # via comm
     # via ipykernel
@@ -295,18 +467,32 @@ traitlets==5.14.3
     # via nbclient
     # via nbconvert
     # via nbformat
+typer==0.12.5
+    # via spacy
+    # via weasel
 types-python-dateutil==2.9.0.20240316
     # via arrow
+typing-extensions==4.12.2
+    # via pydantic
+    # via pydantic-core
+    # via typer
 tzdata==2024.1
     # via pandas
+    # via pydantic
 uri-template==1.3.0
     # via jsonschema
 urllib3==2.2.2
     # via requests
 virtualenv==20.26.3
     # via pre-commit
+wasabi==1.1.3
+    # via spacy
+    # via thinc
+    # via weasel
 wcwidth==0.2.13
     # via prompt-toolkit
+weasel==0.4.1
+    # via spacy
 webcolors==24.6.0
     # via jsonschema
 webencodings==0.5.1
@@ -314,3 +500,5 @@ webencodings==0.5.1
     # via tinycss2
 websocket-client==1.8.0
     # via jupyter-server
+wrapt==1.16.0
+    # via smart-open
