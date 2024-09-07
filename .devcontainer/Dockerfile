@@ -39,3 +39,5 @@ RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.c
     curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key --keyring /usr/share/keyrings/cloud.google.gpg  add - && \
     sudo apt-get update -y && \
     sudo apt-get install -y google-cloud-sdk google-cloud-cli google-cloud-sdk-gke-gcloud-auth-plugin
+
+RUN sudo chown -R vscode /opt
