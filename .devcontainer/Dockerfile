@@ -40,4 +40,4 @@ RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.c
     sudo apt-get update -y && \
     sudo apt-get install -y google-cloud-sdk google-cloud-cli google-cloud-sdk-gke-gcloud-auth-plugin
 
-RUN sudo chown -R vscode /opt
+RUN sudo chown -R vscode /opt && python -m pip install --upgrade pip
