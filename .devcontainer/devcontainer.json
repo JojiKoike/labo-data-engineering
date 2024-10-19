@@ -7,7 +7,7 @@
   "postCreateCommand": "git config --global --add safe.directory /workspace && pre-commit install && gcloud init --no-launch-browser && gcloud auth application-default login",
   "features": {
     "ghcr.io/devcontainers/features/terraform:1": {
-      "version": "1.6.5",
+      "version": "1.9.8",
       "tflint": "0.52.0",
       "terragrunt": "0.66.3"
     },
@@ -79,7 +79,7 @@
         "dvirtz.parquet-viewer"
       ],
       "settings": {
-        //"python.defaultInterpreterPath": "${workspaceFolder}/python-src/.venv/bin/python",
+        "python.defaultInterpreterPath": "${workspaceFolder}/jupyter/.venv/bin/python",
         "python.venvFolders": ["**/.venv"],
         "[python]": {
           "editor.defaultFormatter": "charliermarsh.ruff",
