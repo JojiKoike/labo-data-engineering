@@ -2,6 +2,7 @@
 .ruff_cache
 tmp
 .env
+node_modules
 
 # Local .terraform directories
 **/.terraform/*

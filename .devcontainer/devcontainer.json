@@ -4,7 +4,7 @@
   "service": "python-app",
   "shutdownAction": "none",
   "workspaceFolder": "/workspace",
-  "postCreateCommand": "git config --global --add safe.directory /workspace && pre-commit install && gcloud init --no-launch-browser && gcloud auth application-default login",
+  "postCreateCommand": "git config --global --add safe.directory /workspace && pre-commit install && gcloud init --no-launch-browser && gcloud auth application-default login && npm i -g npm && npm i -g @google/clasp",
   "features": {
     "ghcr.io/devcontainers/features/terraform:1": {
       "version": "1.9.8",
@@ -36,6 +36,9 @@
     },
     "ghcr.io/devcontainers/features/rust:1": {
       "version": "1.81.0"
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20.18.0"
     }
   },
   "customizations": {
