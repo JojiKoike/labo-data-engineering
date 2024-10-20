@@ -79,7 +79,9 @@
         "regadas.sqltools-trino-driver",
         "chrmarti.regex",
         "ms-toolsai.datawrangler",
-        "dvirtz.parquet-viewer"
+        "dvirtz.parquet-viewer",
+        "foxundermoon.shell-format",
+        "timonwong.shellcheck"
       ],
       "settings": {
         "python.defaultInterpreterPath": "${workspaceFolder}/jupyter/.venv/bin/python",
