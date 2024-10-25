@@ -84,6 +84,17 @@
         "timonwong.shellcheck"
       ],
       "settings": {
+        // Common
+        "editor.formatOnSave": true,
+        "files.insertFinalNewline": true,
+        "files.trimTrailingWhitespace": true,
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.profiles.linux": {
+          "zsh": {
+            "path": "/bin/zsh"
+          }
+        },
+        // Python
         "python.defaultInterpreterPath": "${workspaceFolder}/jupyter/.venv/bin/python",
         "python.venvFolders": ["**/.venv"],
         "[python]": {
@@ -91,17 +102,16 @@
           "editor.codeActionsOnSave": {
             "source.fixAll.ruff": "explicit",
             "source.organizeImports.ruff": "explicit"
-          },
-          "editor.formatOnSave": true
+          }
         },
         "mypy-type-checker.importStrategy": "fromEnvironment",
         "mypy-type-checker.args": ["--config-file \"/workspace/mypy.ini\""],
         "python.analysis.typeCheckingMode": "basic",
         "python.analysis.autoSearchPaths": false,
         "python.analysis.extraPaths": ["**/src/"],
+        // SQL
         "[sql]": {
-          "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode",
-          "editor.formatOnSave": true
+          "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode"
         },
         "Prettier-SQL.commaPosition": "after", // Where to place commas for SELECT and GROUP BY clauses
         "Prettier-SQL.denseOperators": false, // Whether to strip whitespace around operators such as + or >=
@@ -116,13 +126,13 @@
         "Prettier-SQL.SQLFlavourOverride": "sql", // Uses custom SQL Flavour to format sql files. Use this if you are using the Microsoft PostgreSQL or MSSQL Extensions since they do not provide a new language ID for VSCode.
         "Prettier-SQL.tabSizeOverride": 2, // Overrides tabSize if Prettier-SQL.ignoreTabSettings is enabled
         "Prettier-SQL.tabulateAlias": false, // Whether to right-align aliases to the longest line in the SELECT clause
-        "files.insertFinalNewline": true,
-        "files.trimTrailingWhitespace": true,
-        "terminal.integrated.defaultProfile.linux": "zsh",
-        "terminal.integrated.profiles.linux": {
-          "zsh": {
-            "path": "/bin/zsh"
-          }
+        // JSON
+        "[json][jsonc]": {
+          "editor.quickSuggestions": {
+            "strings": true
+          },
+          "editor.suggest.insertMode": "replace",
+          "editor.defaultFormatter": "vscode.json-language-features"
         }
       }
     }
