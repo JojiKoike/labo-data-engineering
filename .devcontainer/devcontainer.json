@@ -1,6 +1,8 @@
 {
   "name": "Data Engineering Labo Container",
-  "dockerComposeFile": ["../compose.yml"],
+  "dockerComposeFile": [
+    "../compose.yml"
+  ],
   "service": "python-app",
   "shutdownAction": "none",
   "workspaceFolder": "/workspace",
@@ -81,11 +83,12 @@
         "ms-toolsai.datawrangler",
         "dvirtz.parquet-viewer",
         "foxundermoon.shell-format",
-        "timonwong.shellcheck"
+        "timonwong.shellcheck",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
       ],
       "settings": {
         // Common
-        "editor.formatOnSave": true,
         "files.insertFinalNewline": true,
         "files.trimTrailingWhitespace": true,
         "terminal.integrated.defaultProfile.linux": "zsh",
@@ -96,7 +99,9 @@
         },
         // Python
         "python.defaultInterpreterPath": "${workspaceFolder}/jupyter/.venv/bin/python",
-        "python.venvFolders": ["**/.venv"],
+        "python.venvFolders": [
+          "**/.venv"
+        ],
         "[python]": {
           "editor.defaultFormatter": "charliermarsh.ruff",
           "editor.codeActionsOnSave": {
@@ -105,10 +110,25 @@
           }
         },
         "mypy-type-checker.importStrategy": "fromEnvironment",
-        "mypy-type-checker.args": ["--config-file \"/workspace/mypy.ini\""],
+        "mypy-type-checker.args": [
+          "--config-file \"/workspace/mypy.ini\""
+        ],
         "python.analysis.typeCheckingMode": "basic",
         "python.analysis.autoSearchPaths": false,
-        "python.analysis.extraPaths": ["**/src/"],
+        "python.analysis.extraPaths": [
+          "**/src/"
+        ],
+        // JavaScript, TypeScript
+        "[javascript][typescript]": {
+          "editor.formatOnSave": true,
+          "editor.defaultFormatter": "esbenp.prettier-vscode",
+          "editor.tabSize": 2,
+          "editor.maxTokenizationLineLength": 2500
+        },
+        "eslint.format.enable": false,
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": "explicit"
+        },
         // SQL
         "[sql]": {
           "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode"
