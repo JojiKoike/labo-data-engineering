@@ -30,7 +30,9 @@ export default [
             ...eslintConfigPrettier.rules, // Prettier のルールを直接追加
             "jsdoc/require-description": "error",
             "jsdoc/check-values": "error",
-            'no-console': 'error'
+            'no-console': 'error',
+            'no-unused-vars': 'error',
+            'no-undef': 'error'
         },
     },
 ];
