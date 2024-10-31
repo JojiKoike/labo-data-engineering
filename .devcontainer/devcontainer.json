@@ -85,7 +85,8 @@
         "foxundermoon.shell-format",
         "timonwong.shellcheck",
         "dbaeumer.vscode-eslint",
-        "esbenp.prettier-vscode"
+        "esbenp.prettier-vscode",
+        "github.vscode-github-actions"
       ],
       "settings": {
         // Common
