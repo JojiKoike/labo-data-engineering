@@ -29,7 +29,7 @@ RUN rye config --set-bool behavior.global-python=true && \
 RUN apt-get update && \
     apt-get install -y openjdk-17-jdk curl unzip imagemagick rename \
     libgdal-dev gcc g++ libspatialindex-dev gnupg apt-transport-https ca-certificates \
-    num-utils pandoc
+    num-utils pandoc gnupg2
 
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip" -o "awscliv2.zip" && \
     unzip awscliv2.zip && \
